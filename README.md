@@ -12,6 +12,8 @@ A responsive digital clock web application that displays real-time hours, minute
 - HTML
 - CSS
 - JavaScript
+#screnshotoutput
+<img width="959" height="475" alt="image" src="https://github.com/user-attachments/assets/d239a50f-156a-4aea-a731-81fb00487ed2" />
 
 
 
