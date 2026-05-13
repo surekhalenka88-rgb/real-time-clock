@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <style>
+        .k {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            background-image: url("C:\\Users\\user\\Downloads\\wallpape.webp");
+            background-size: cover;
+            background-position: center;
+            /* center image */
+            background-repeat: no-repeat;
+            /* no repeat */
+            background-attachment: fixed;
+        }
+        
+        .c {
+            display: flex;
+            padding: 10px;
+            border-radius: 10px;
+            color: black;
+            width: 500px;
+            height: 200px;
+            font-size: 100px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #6dd5fa, #c471ed);
+        }
+        
+        .timer-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 50px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            /* Responsive text */
+            font-size: 60px;
+            color: white;
+        }
+        
+        @media (max-width: 480px) {
+            .timer-box {
+                padding: 15px 25px;
+                font-size: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .timer-box {
+                padding: 20px 35px;
+                font-size: 45px;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .timer-box {
+                font-size: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="k">
+        <div class="c">
+            <h1 id="clock">00:00:00</h1>
+        </div>
+    </div>
+
+</body>
+<script>
+    function updateClock() {
+        let now = new Date();
+
+        let hrs = now.getHours();
+        let mins = now.getMinutes();
+        let secs = now.getSeconds();
+
+        // Add leading zeros
+        hrs = String(hrs).padStart(2, "0");
+        mins = String(mins).padStart(2, "0");
+        secs = String(secs).padStart(2, "0");
+
+        document.getElementById("clock").innerText =
+            hrs + ":" + mins + ":" + secs;
+    }
+
+    // Run every second
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</html>
