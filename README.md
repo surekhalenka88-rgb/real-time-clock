@@ -13,17 +13,13 @@ A responsive digital clock web application that displays real-time hours, minute
 - CSS
 - JavaScript
 
-## 📸 Screenshot
-(Add your project screenshot here)
 
-## 🌐 Live Demo
-(Add your GitHub Pages link here)
 
 ## 📂 Project Structure
 - time.html
 
 ## 💡 Author
-- Your Name
+- lenka surekha
 
 ---
 
